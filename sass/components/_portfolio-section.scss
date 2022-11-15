@@ -1,0 +1,98 @@
+// .portfolio__filter-list {
+//   @include flexContainer();
+//   gap: 8px;
+//   margin-bottom: 50px;
+// }
+
+// .portfolio__filter-btn {
+//   padding: 6px 22px;
+//   font-weight: getFontWeight('medium');
+//   font-size: getFontSize('normal');
+//   line-height: 1.62;
+//   background-color: getBgColor('main');
+//   border: none;
+//   border-radius: 4px;
+//   @include transitionFunction(all);
+
+//   &:hover,
+//   &:focus {
+//     color: getColor('secondary-text');
+//     background-color: getColor('accent');
+//     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+//       0px 2px 2px rgba(0, 0, 0, 0.12);
+//   }
+// }
+
+// .portfolio__filter-btn--active {
+//   color: getColor('secondary-text');
+//   background-color: getColor('accent');
+//   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+//     0px 2px 2px rgba(0, 0, 0, 0.12);
+// }
+
+// .portfolio__list {
+//   @include itemList();
+// }
+
+// .portfolio__item {
+//   @include cardWidth(2, 30px, 3);
+// }
+
+// .portfolio__link {
+//   display: block;
+//   @include transitionFunction(box-shadow);
+
+//   &:hover,
+//   &:focus {
+//     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+//       1px 4px 6px rgba(0, 0, 0, 0.16);
+//   }
+// }
+
+// .portfolio__thumb {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// .portfolio__overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   padding: 63px 24px;
+//   background-color: getColor('accent-transparent');
+//   transform: translateY(100%);
+//   @include transitionFunction('transform');
+
+//   .portfolio__link:hover &,
+//   .portfolio__link:focus & {
+//     transform: translateY(0);
+//   }
+// }
+
+// .portfolio__description {
+//   font-size: getFontSize('bigger');
+//   line-height: 1.56;
+//   color: getColor('secondary-text');
+// }
+
+// .portfolio__info-box {
+//   padding: 20px 24px;
+//   @include bordered(getColor('portfolio-border'));
+// }
+
+// .portfolio__title {
+//   margin-bottom: 4px;
+//   font-weight: getFontWeight('bold');
+//   font-size: getFontSize('normal');
+//   line-height: 2;
+//   letter-spacing: 0.06em;
+//   color: getColor('primary-title');
+// }
+
+// .portfolio__filter-type {
+//   font-size: getFontSize('normal');
+//   line-height: 1.88;
+//   color: getColor('primary-text');
+// }

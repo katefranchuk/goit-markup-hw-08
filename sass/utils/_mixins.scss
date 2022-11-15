@@ -1,0 +1,25 @@
+@mixin transitionFunction($property, $time: 250ms, $function: cubic-bezier(0.4, 0, 0.2, 1)) {
+  transition-property: $property;
+  transition-duration: $time;
+  transition-timing-function: $function;
+}
+
+@mixin bordered($color, $width: 1px, $type: solid) {
+  border: $width $type $color;
+}
+
+@mixin flexContainer($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin cardWidth($intervalQuantity, $interval, $cardQuantity) {
+  width: calc((100% - $intervalQuantity * $interval) / $cardQuantity);
+}
+
+@mixin itemList($interval: 30px) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $interval;
+}

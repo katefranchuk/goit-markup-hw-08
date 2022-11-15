@@ -1,0 +1,9 @@
+@import '../utils/vars';
+
+body {
+  font-family: getFontFamily('main'), sans-serif;
+  letter-spacing: 0.03em;
+  font-size: getFontSize('main');
+  font-weight: getFontWeight('regular');
+  color: getColor('primary-title');
+}

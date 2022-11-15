@@ -1,0 +1,60 @@
+$color: (
+  'accent': #2196f3,
+  'accent-transparent': rgba(33, 150, 243, 0.9),
+  'fill': #afb1b8,
+  'primary-title': #212121,
+  'primary-text': #757575,
+  'secondary-title': #ffffff,
+  'secondary-text': #ffffff,
+  'secondary-text-transparent': rgba(255, 255, 255, 0.6),
+  'portfolio-border': #eeeeee,
+);
+
+@function getColor($key) {
+  @return map-get($color, $key);
+};
+
+$bgColor: (
+  'main': #f5f4fa,
+  'dark': #2f303a,
+  'btn-active': #188ce8,
+);
+
+@function getBgColor($key) {
+  @return map-get($bgColor, $key);
+};
+
+$fontWeight: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+  'black': 900,
+);
+
+@function getFontWeight($key) {
+  @return map-get($fontWeight, $key);
+};
+
+$fontFamily: (
+  'main': 'Roboto',
+  'secondary': 'Raleway',
+);
+
+@function getFontFamily($key) {
+  @return map-get($fontFamily, $key);
+};
+
+$fontSize: (
+  'logo': 26px,
+  'main': 14px,
+  'h1': 44px,
+  'h2': 36px,
+  'bigger': 18px,
+  'normal': 16px,
+  'small': 12px,
+);
+
+@function getFontSize($key) {
+  @return map-get($fontSize, $key);
+};
+

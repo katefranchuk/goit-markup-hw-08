@@ -1,0 +1,91 @@
+@import '../utils/vars';
+@import '../utils/mixins';
+
+.container {
+  // max-width: 1200px;
+  // width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section__title {
+  margin-bottom: 30px;
+  font-weight: getFontWeight('bold');
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+    font-size: getFontSize('h2');
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn {
+    min-width: 200px;
+    height: 50px;
+    font-weight: getFontWeight('bold');
+    font-size: getFontSize('normal');
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: getColor('secondary-text');
+    background-color: getColor('accent');
+    border-style: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    @include transitionFunction (background-color);
+
+  &:hover,
+  &:focus {
+    background-color: getBgColor('btn-active');
+  }
+}
+
+.btn__icon--left {
+  margin-left: 12px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 10px;
+  }
+}
