@@ -1,15 +1,22 @@
 @import '../common/logo';
 
 .header {
-  // padding-top: 25px;
-  // padding-bottom: 24px;
-  position: relative;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 9px;
   border-bottom: 1px solid #ececec;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 25px;
+    padding-bottom: 24px;
+  }
 }
 
-.header__menu {
+.header__body {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,102 +24,198 @@
   // gap: 93px;
 }
 
-.menu__buttons {
+.header__buttons {
   display: inline-flex;
   padding: 0;
   border: none;
+  outline: transparent;
   background-color: transparent;
+  z-index: 10;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header__icons {
+  .header__buttons:hover &,
+  .header__buttons:focus & {
+    fill: getColor('accent');
+  }
 }
 
 .icon-cross {
   display: none;
   @include transitionFunction(fill);
 
-  .menu__buttons.is-open & {
+  .header__buttons.is-open & {
     display: block;
   }
 }
 
 .icon-menu {
-  .menu__buttons.is-open & {
+  .header__buttons.is-open & {
     display: none;
   }
 }
 
-// .header__body {
+// .mobile-menu {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 1;
+//   width: 100%;
+//   height: 100vh;
+//   flex-direction: column;
 //   display: flex;
-//   align-items: center;
+//   justify-content: space-between;
+//   padding: 48px 40px;
+//   background-color: #ffffff;
+//   @include transitionFunction(all);
+
+//   &.is-open {
+    
+//   }
+
+//   @media screen and (min-width: 768px) {
+    
+//   }
 // }
 
-.menu__container {
-  // display: none;
-  position: fixed;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  background-color: getColor('accent');
-  @include transitionFunction(top);
-
-  &.is-open {
-    top: 0;
+.menu__list {
+  @include itemList(32px);
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 50px;
   }
 }
 
+.menu__link {
+  // position: relative;
+  font-size: 40px;
+  font-weight: getFontWeight('medium');
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: inherit;
+  @include transitionFunction(color);
 
-// .menu__list {
-//   @include itemList(50px);
-// }
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
 
-// .menu__link {
-//   position: relative;
-//   font-weight: getFontWeight('medium');
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   color: inherit;
-//   @include transitionFunction(color);
+  @media screen and (min-width: 768px) {
+    font-size: inherit;
+    line-height: 1.14;
+  }
 
-//   &:hover,
-//   &:focus {
-//     color: getColor('accent');
-//   }
+  &--active {
+    @media screen and (min-width: 768px) {
+      color: getColor('accent');
+    }
+  }
 
-//   &--active::after {
-//     content: '';
-//     position: absolute;
-//     left: 0;
-//     bottom: -32px;
-//     display: block;
-//     width: 100%;
-//     height: 4px;
-//     background-color: getColor('accent');
-//     border-radius: 2px;
-//   }
-// }
+  @media screen and (min-width: 768px) {
+    &--active::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -32px;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: getColor('accent');
+      border-radius: 2px;
+    }
+  }
+}
 
-// .header__contacts {
+// .menu__contacts {
 //   margin-left: auto;
 // }
-// .contacts {
-//   @include itemList();
-// }
 
-// .contacts__link {
-//   display: flex;
-//   align-items: center;
-//   font-weight: getFontWeight('medium');
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   color: getColor('primary-text');
-//   @include transitionFunction(color);
+.header__contacts {
+  margin-bottom: 64px;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  //   @include itemList();
+}
 
-//   &:hover,
-//   &:focus {
-//     color: getColor('accent');
-//   }
-// }
-// .contacts__icon {
-//   margin-right: 10px;
-//   fill: currentColor;
-// }
+.contacts__item:first-child {
+  @media screen and (max-width: 767px) {
+    order: 1;
+  }
+}
+
+.contacts__link {
+  font-size: 24px;
+  font-weight: getFontWeight('medium');
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: getColor('primary-text');
+  @include transitionFunction(color);
+
+  @media screen and (min-width: 767px) {
+    font-size: getFontSize('small');
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+
+  &--accent {
+    @media screen and (max-width: 767px) {
+      font-size: 34px;
+      line-height: 1.17;
+      color: getColor('accent');
+    }
+  }
+  //   display: flex;
+  //   align-items: center;
+}
+
+.contacts__icon {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+.mobile-menu__socials {
+  @include itemList(10px);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu__link {
+  display: flex;
+  align-items: center;
+  font-size: getFontSize('bigger');
+  font-weight: getFontWeight('medium');
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: getColor('accent');
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 22px;
+    margin-left: 10px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}

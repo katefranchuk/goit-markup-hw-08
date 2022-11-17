@@ -1,44 +1,43 @@
-// .socials {
-//   display: flex;
-//   justify-content: center;
-//   gap: 10px;
-// }
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 
-// .socials__item {
-//   width: 44px;
-//   height: 44px;
-// }
+.socials__item {
+  width: 44px;
+  height: 44px;
+}
 
-// .socials__link {
-//   @include flexContainer();
-//   width: 100%;
-//   height: 100%;
-//   border-radius: 50%;
-//   @include transitionFunction(all);
-// }
+.socials__link {
+  @include flexContainer();
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  @include transitionFunction(all);
+}
 
-// .socials__link--shapeless {
-//   @extend .socials__link;
-//   background-color: transparent;
-//   color: getColor('fill');
+.socials__link--shapeless {
+  background-color: transparent;
+  color: getColor('fill');
 
-//   &:hover,
-//   &:focus {
-//     background-color: getColor('accent');
-//     color: getColor('secondary-text');
-//   }
-// }
+  &:hover,
+  &:focus {
+    background-color: getColor('accent');
+    color: getColor('secondary-text');
+  }
+}
 
-// .socials__link--circle {
-//   color: getColor('secondary-text');
-//   background-color: rgba(255, 255, 255, 0.1);
+.socials__link--circle {
+  color: getColor('secondary-text');
+  background-color: rgba(255, 255, 255, 0.1);
 
-//   &:hover,
-//   &:focus {
-//     background-color: getColor('accent');
-//   }
-// }
+  &:hover,
+  &:focus {
+    background-color: getColor('accent');
+  }
+}
 
-// .socials__icon {
-//   fill: currentColor;
-// }
+.socials__icon {
+  fill: currentColor;
+}

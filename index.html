@@ -20,55 +20,70 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="header__menu menu">
+        <div class="header__body">
           <a class="logo logo--dark" href="./index.html" lang="en"
             ><span class="logo__accent">Web</span>Studio</a
           >
           <button
-            class="menu__buttons"
+            class="header__buttons"
             type="button"
             aria-expanded="false"
-            aria-controls="menu-container"
+            aria-controls="mobile-menu"
             data-menu-button
           >
-            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <svg
+              class="header__icons"
+              width="40"
+              height="40"
+              aria-label="Перемикач мобільного меню"
+            >
               <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
               <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
             </svg>
           </button>
 
-          <!-- <div class="menu__container" id="menu-container" data-menu>
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link menu__link--active" href="./index.html">Студія</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./portfolio.html">Портфоліо</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="">Контакти</a>
-              </li>
-            </ul>
-            <ul class="header__contacts contacts">
-              <li class="contacts__item">
-                <a class="contacts__link" href="mailto:info@devstudio.com">
-                  <svg class="contacts__icon" width="16" height="12">
-                    <use href="./images/icons.svg#icon-envelope"></use>
-                  </svg>
-                  info@devstudio.com
-                </a>
-              </li>
-              <li class="contacts__item">
-                <a class="contacts__link" href="tel:+380961111111">
-                  <svg class="contacts__icon" width="10" height="16">
-                    <use href="./images/icons.svg#icon-phone"></use>
-                  </svg>
-                  +38 096 111 11 11
-                </a>
-              </li>
-            </ul>
-          </div> -->
-        </nav>
+          <div class="mobile-menu" id="mobile-menu" data-menu>
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link menu__link--active" href="./index.html">Студія</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__info-box">
+              <ul class="header__contacts contacts">
+                <li class="contacts__item">
+                  <a class="contacts__link" href="mailto:info@devstudio.com">
+                    <svg class="contacts__icon" width="16" height="12">
+                      <use href="./images/icons.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link contacts__link--accent" href="tel:+380961111111">
+                    <svg class="contacts__icon" width="10" height="16">
+                      <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+              <ul class="mobile-menu__socials">
+                <li><a href="" class="mobile-menu__link">Instagram</a></li>
+                <li><a href="" class="mobile-menu__link">Twitter</a></li>
+                <li><a href="" class="mobile-menu__link">Facebook</a></li>
+                <li><a href="" class="mobile-menu__link">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -173,7 +188,33 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__card">
-              <img src="./images/worker1.jpg" alt="світлина Ігора Дем'яненка" width="270" />
+              <picture class="team__img">
+                <source
+                  srcset="
+                    ./images/team/dk/first-worker-270.jpg    1x,
+                    ./images/team/dk/first-worker-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tb/first-worker-354.jpg    1x,
+                    ./images/team/tb/first-worker-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/mb/first-worker-450.jpg    1x,
+                    ./images/team/mb/first-worker-450@2x.jpg 2x
+                  "
+                  media="(min-width: 375px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team/mb/first-worker-450.jpg" alt="світлина Ігора Дем'яненка" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
                 <p class="team__function" lang="en">Product Designer</p>
@@ -230,7 +271,33 @@
               </div>
             </li>
             <li class="team__card">
-              <img src="./images/worker2.jpg" alt="світлина Ольги Рєпіної" width="270" />
+              <picture class="team__img">
+                <source
+                  srcset="
+                    ./images/team/dk/second-worker-270.jpg    1x,
+                    ./images/team/dk/second-worker-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tb/second-worker-354.jpg    1x,
+                    ./images/team/tb/second-worker-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/mb/second-worker-450.jpg    1x,
+                    ./images/team/mb/second-worker-450@2x.jpg 2x
+                  "
+                  media="(min-width: 375px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team/mb/second-worker-450.jpg" alt="світлина Ольги Рєпіної" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__title">Ольга Рєпіна</h3>
                 <p class="team__function" lang="en">Frontend Developer</p>
@@ -287,7 +354,33 @@
               </div>
             </li>
             <li class="team__card">
-              <img src="./images/worker3.jpg" alt="світлина Миколи Тарасова" width="270" />
+              <picture class="team__img">
+                <source
+                  srcset="
+                    ./images/team/dk/third-worker-270.jpg    1x,
+                    ./images/team/dk/third-worker-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tb/third-worker-354.jpg    1x,
+                    ./images/team/tb/third-worker-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/mb/third-worker-450.jpg    1x,
+                    ./images/team/mb/third-worker-450@2x.jpg 2x
+                  "
+                  media="(min-width: 375px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team/mb/third-worker-450.jpg" alt="світлина Миколи Тарасова" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__title">Микола Тарасов</h3>
                 <p class="team__function" lang="en">Marketing</p>
@@ -344,7 +437,33 @@
               </div>
             </li>
             <li class="team__card">
-              <img src="./images/worker4.jpg" alt="світлина Михайла Єрмакова" width="270" />
+              <picture class="team__img">
+                <source
+                  srcset="
+                    ./images/team/dk/fourth-worker-270.jpg    1x,
+                    ./images/team/dk/fourth-worker-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tb/fourth-worker-354.jpg    1x,
+                    ./images/team/tb/fourth-worker-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/mb/fourth-worker-450.jpg    1x,
+                    ./images/team/mb/fourth-worker-450@2x.jpg 2x
+                  "
+                  media="(min-width: 375px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/team/mb/fourth-worker-450.jpg" alt="світлина Михайла Єрмакова" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__title">Михайло Єрмаков</h3>
                 <p class="team__function" lang="en">UI Designer</p>

@@ -1,96 +1,141 @@
-// .footer {
-//   padding-block: 60px;
-//   background-color: getBgColor('dark');
-// }
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: getBgColor('dark');
+}
 
-// .footer__container {
-//   display: flex;
-//   align-items: baseline;
-// }
+.footer__container {
+  text-align: center;
 
-// .footer__info {
-//   margin-right: 70px;
-// }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
 
-// .footer__logo {
-//   display: block;
-//   margin-bottom: 20px;
-// }
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+    text-align: start;
+  }
+}
 
-// .footer__address {
-//   margin-bottom: 9px;
-//   line-height: 1.71;
-//   color: getColor('secondary-text');
-// }
+.footer__info {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+}
 
-// .footer__contacts-item {
-//   &:first-child {
-//     margin-bottom: 9px;
-//   }
-// }
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
 
-// .footer__contacts-link {
-//   display: block;
-//   line-height: 1.71;
-//   color: getColor('secondary-text-transparent');
-//   @include transitionFunction(color);
+.footer__address {
+  margin-bottom: 8px;
+  line-height: 1.71;
+  color: getColor('secondary-text');
 
-//   &:hover,
-//   &:focus {
-//     color: getColor('accent');
-//   }
-// }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
 
-// .footer__social-media {
-//   margin-right: 93px;
-// }
+.footer__contacts-item {
+  &:first-child {
+    margin-bottom: 8px;
 
-// .footer__prompt {
-//   margin-bottom: 20px;
-//   font-weight: getFontWeight('bold');
-//   font-size: 14px;
-//   line-height: 1.14;
-//   text-transform: uppercase;
-//   color: getColor('secondary-text');
-// }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
+  }
+}
 
-// .footer__form {
-//   display: flex;
-//   align-items: center;
-// }
+.footer__contacts-link {
+  line-height: 1.71;
+  color: getColor('secondary-text-transparent');
+  @include transitionFunction(color);
 
-// .footer__form-field {
-//   position: relative;
-// }
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}
 
-// .footer__form-input {
-//   width: 358px;
-//   height: 50px;
-//   margin-right: 12px;
-//   padding: 0 16px;
-//   font-size: getFontSize('normal');
-//   line-height: 1.25;
-//   color: getColor('secondary-text');
-//   background-color: transparent;
-//   @include bordered(rgba(255, 255, 255, 0.3));
-//   border-radius: 4px;
-// }
+.footer__social-media {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
 
-// .footer__form-label {
-//   position: absolute;
-//   top: 50%;
-//   left: 16px;
-//   font-size: getFontSize('normal');
-//   line-height: 1.25;
-//   color: getColor('secondary-text-transparent');
-//   transform: translateY(-50%);
-//   @include transitionFunction(transform);
+.footer__prompt {
+  margin-bottom: 20px;
+  font-weight: getFontWeight('bold');
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: getColor('secondary-text');
+}
 
-//   .footer__form-field:focus-within & {
-//     transform: translate(-80px, -50%);
-//   }
-// }
+.footer__form {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+}
 
-// .footer__btn {
-//   @include flexContainer(inline-flex);
-// }
+.footer__form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.footer__form-input {
+  width: 100%;
+  height: 50px;
+  padding: 15px 16px;
+  font-size: getFontSize('normal');
+  line-height: 1.25;
+  color: getColor('secondary-text');
+  background-color: transparent;
+  @include bordered(rgba(255, 255, 255, 0.3));
+  border-radius: 4px;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
+}
+
+.footer__form-label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  font-size: getFontSize('normal');
+  line-height: 1.25;
+  color: getColor('secondary-text-transparent');
+  transform: translateY(-50%);
+  @include transitionFunction(transform);
+
+  .footer__form-input:focus + & {
+    transform: translateY(-250%);
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer__form-input:focus + & {
+      transform: translate(-80px, -50%);
+    }
+  }
+}
+
+.footer__btn {
+  @include flexContainer(inline-flex);
+}
