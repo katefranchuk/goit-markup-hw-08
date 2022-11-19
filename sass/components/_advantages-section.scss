@@ -1,14 +1,8 @@
 .advantages__list {
- @include itemList();
-
-  // @media screen and (min-width: 768px) {
-  //   @include itemList();
-  // }
+  @include itemList();
 }
 
 .advantages__item {
-  width: 100%;
-
   @media screen and (min-width: 768px) {
     @include cardWidth(1, 30px, 2);
   }
@@ -30,13 +24,13 @@
   font-weight: getFontWeight('bold');
   font-size: getFontSize('main');
   line-height: 1.14;
+  text-align: center;
   text-transform: uppercase;
 
-  @media screen and (max-width: 767px) {
-    text-align: center;
+    @media screen and (min-width: 768px) {
+    text-align: start;
   }
 }
-
 .advantages__text {
   line-height: 1.71;
   color: getColor('primary-text');

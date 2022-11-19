@@ -61,7 +61,7 @@
 }
 
 .portfolio__link {
-  //   display: block;
+  display: block;
   @include transitionFunction(box-shadow);
 
   &:hover,
@@ -115,7 +115,7 @@
 .portfolio__title {
   margin-bottom: 4px;
   font-weight: getFontWeight('bold');
-  font-size: getFontSize('bigger');
+  font-size: getFontSize('normal');
   line-height: 2;
   letter-spacing: 0.06em;
   color: getColor('primary-title');

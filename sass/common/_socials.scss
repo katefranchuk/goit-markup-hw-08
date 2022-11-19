@@ -18,6 +18,7 @@
 }
 
 .socials__link--shapeless {
+  @extend .socials__link;
   background-color: transparent;
   color: getColor('fill');
 
