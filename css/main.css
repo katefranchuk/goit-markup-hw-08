@@ -67,8 +67,8 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .section {
@@ -84,7 +84,7 @@ body {
   line-height: 1.17;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .section__title {
     margin-bottom: 50px;
     font-size: 36px;
@@ -592,6 +592,7 @@ body {
 .team__description {
   padding-top: 30px;
   padding-bottom: 24px;
+  text-align: center;
 }
 @media screen and (min-width: 1200px) {
   .team__description {
@@ -604,14 +605,13 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  text-align: center;
 }
 
 .team__function {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.18;
-  text-align: center;
+  color: #757575;
 }
 
 .socials {
@@ -873,8 +873,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 450px;
-  min-height: 581px;
+  width: 90%;
   padding: 40px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -889,6 +888,16 @@ body {
 .backdrop.is-hidden .modal {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.2);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal__close-btn {
@@ -1024,9 +1033,16 @@ body {
 }
 
 .modal__form-acceptance-description {
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.71;
+  line-height: 1.16;
   color: #757575;
+}
+@media screen and (min-width: 1200px) {
+  .modal__form-acceptance-description {
+    font-size: inherit;
+    line-height: 1.71;
+  }
 }
 
 .modal__form-acceptance-link {

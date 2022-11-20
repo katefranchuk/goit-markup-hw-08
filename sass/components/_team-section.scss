@@ -24,6 +24,7 @@
 .team__description {
   padding-top: 30px;
   padding-bottom: 24px;
+  text-align: center;
 
     @media screen and (min-width: 1200px) {
     padding-bottom: 30px;
@@ -35,14 +36,12 @@
   font-weight: getFontWeight('medium');
   font-size: getFontSize('normal');
   line-height: 1.18;
-  text-align: center;
 }
 
 .team__function {
   margin-bottom: 16px;
   font-size: getFontSize('normal');
   line-height: 1.18;
-  text-align: center;
-  color: getColor('primary-text-color');
+  color: getColor('primary-text');
 }
 
